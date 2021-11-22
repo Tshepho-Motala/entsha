@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>entsha</Name>
+    <RootNamespace>entsha</RootNamespace>
+    <InterpreterId>MSBuild|entsha_env|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>Pytest</TestFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>88f24fdc-7721-410f-bf07-9c7dd648ba65</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>entsha.settings</DjangoSettingsModule>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="accounts\admin.py" />
+    <Compile Include="accounts\apps.py" />
+    <Compile Include="accounts\migrations\__init__.py" />
+    <Compile Include="accounts\models.py" />
+    <Compile Include="accounts\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="accounts\tests.py" />
+    <Compile Include="accounts\views.py" />
+    <Compile Include="accounts\__init__.py" />
+    <Compile Include="app\forms.py" />
+    <Compile Include="app\models.py" />
+    <Compile Include="app\tests.py" />
+    <Compile Include="app\views.py" />
+    <Compile Include="app\__init__.py" />
+    <Compile Include="app\migrations\__init__.py" />
+    <Compile Include="delphius\admin.py" />
+    <Compile Include="delphius\apps.py" />
+    <Compile Include="delphius\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="delphius\migrations\__init__.py" />
+    <Compile Include="delphius\models.py" />
+    <Compile Include="delphius\tests.py" />
+    <Compile Include="delphius\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="delphius\views.py" />
+    <Compile Include="delphius\__init__.py" />
+    <Compile Include="del_connect\admin.py" />
+    <Compile Include="del_connect\apps.py" />
+    <Compile Include="del_connect\migrations\__init__.py" />
+    <Compile Include="del_connect\models.py" />
+    <Compile Include="del_connect\tests.py" />
+    <Compile Include="del_connect\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="del_connect\views.py" />
+    <Compile Include="del_connect\__init__.py" />
+    <Compile Include="intelliview\admin.py" />
+    <Compile Include="intelliview\apps.py" />
+    <Compile Include="intelliview\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="intelliview\migrations\__init__.py" />
+    <Compile Include="intelliview\models.py" />
+    <Compile Include="intelliview\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="intelliview\tests.py" />
+    <Compile Include="intelliview\views.py" />
+    <Compile Include="intelliview\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="entsha\__init__.py" />
+    <Compile Include="entsha\settings.py" />
+    <Compile Include="entsha\urls.py" />
+    <Compile Include="entsha\wsgi.py" />
+    <Compile Include="NGBS\admin.py" />
+    <Compile Include="NGBS\apps.py" />
+    <Compile Include="NGBS\migrations\__init__.py" />
+    <Compile Include="NGBS\models.py" />
+    <Compile Include="NGBS\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NGBS\tests.py" />
+    <Compile Include="NGBS\views.py" />
+    <Compile Include="NGBS\__init__.py" />
+    <Compile Include="NGMC\admin.py" />
+    <Compile Include="NGMC\apps.py" />
+    <Compile Include="NGMC\migrations\__init__.py" />
+    <Compile Include="NGMC\models.py" />
+    <Compile Include="NGMC\tests.py" />
+    <Compile Include="NGMC\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NGMC\views.py" />
+    <Compile Include="NGMC\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="accounts\" />
+    <Folder Include="accounts\migrations\" />
+    <Folder Include="accounts\templates\" />
+    <Folder Include="accounts\templates\accounts\" />
+    <Folder Include="app\" />
+    <Folder Include="app\migrations\" />
+    <Folder Include="app\static\" />
+    <Folder Include="app\static\app\" />
+    <Folder Include="app\static\app\content\" />
+    <Folder Include="app\static\app\fonts\" />
+    <Folder Include="app\static\app\images\" />
+    <Folder Include="app\static\app\images\browser\" />
+    <Folder Include="app\static\app\images\slider\" />
+    <Folder Include="app\static\app\images\user\" />
+    <Folder Include="app\static\app\images\widget\" />
+    <Folder Include="app\static\app\img\" />
+    <Folder Include="app\static\app\img\clients\" />
+    <Folder Include="app\static\app\img\portfolio\" />
+    <Folder Include="app\static\app\img\team\" />
+    <Folder Include="app\static\app\Logo\" />
+    <Folder Include="app\static\app\Logo\BE BROADBAND\" />
+    <Folder Include="app\static\app\Logo\BE BROADBAND\New folder\" />
+    <Folder Include="app\static\app\Logo\CTEL\" />
+    <Folder Include="app\static\app\Logo\Del Connect\" />
+    <Folder Include="app\static\app\Logo\Delphius\" />
+    <Folder Include="app\static\app\Logo\DIBANA\" />
+    <Folder Include="app\static\app\Logo\FIBREHOME\" />
+    <Folder Include="app\static\app\Logo\FIBREXHANGE\" />
+    <Folder Include="app\static\app\Logo\ID4\" />
+    <Folder Include="app\static\app\Logo\INTELLIVIEW\" />
+    <Folder Include="app\static\app\Logo\NG GROUP\" />
+    <Folder Include="app\static\app\Logo\NG GROUP\Group Logo\" />
+    <Folder Include="app\static\app\Logo\NG SKILLS\" />
+    <Folder Include="app\static\app\Logo\NGBS\" />
+    <Folder Include="app\static\app\Logo\NGMC\" />
+    <Folder Include="app\static\app\Logo\NGPL\" />
+    <Folder Include="app\static\app\scripts\" />
+    <Folder Include="app\templates\" />
+    <Folder Include="app\templates\app\" />
+    <Folder Include="delphius\" />
+    <Folder Include="delphius\migrations\" />
+    <Folder Include="delphius\templates\" />
+    <Folder Include="delphius\templates\delphius\" />
+    <Folder Include="del_connect\" />
+    <Folder Include="del_connect\migrations\" />
+    <Folder Include="del_connect\templates\" />
+    <Folder Include="del_connect\templates\del_connect\" />
+    <Folder Include="entsha\" />
+    <Folder Include="intelliview\" />
+    <Folder Include="intelliview\migrations\" />
+    <Folder Include="intelliview\templates\" />
+    <Folder Include="intelliview\templates\intelliview\" />
+    <Folder Include="NGBS\" />
+    <Folder Include="NGBS\migrations\" />
+    <Folder Include="NGBS\templates\" />
+    <Folder Include="NGBS\templates\NGBS\" />
+    <Folder Include="NGMC\" />
+    <Folder Include="NGMC\migrations\" />
+    <Folder Include="NGMC\templates\" />
+    <Folder Include="NGMC\templates\NGMC\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="accounts\templates\accounts\base.html" />
+    <Content Include="accounts\templates\accounts\index.html" />
+    <Content Include="accounts\templates\accounts\login.html" />
+    <Content Include="accounts\templates\accounts\logout.html" />
+    <Content Include="accounts\templates\accounts\password_change_done.html" />
+    <Content Include="accounts\templates\accounts\password_change_form.html" />
+    <Content Include="accounts\templates\accounts\password_reset_complete.html" />
+    <Content Include="accounts\templates\accounts\password_reset_confirm.html" />
+    <Content Include="accounts\templates\accounts\password_reset_done.html" />
+    <Content Include="accounts\templates\accounts\password_reset_email.html" />
+    <Content Include="accounts\templates\accounts\password_reset_form.html" />
+    <Content Include="accounts\templates\accounts\registration.html" />
+    <Content Include="app\static\app\images\browser\chrome.png" />
+    <Content Include="app\static\app\images\browser\firefox.png" />
+    <Content Include="app\static\app\images\browser\ie.png" />
+    <Content Include="app\static\app\images\browser\opera.png" />
+    <Content Include="app\static\app\images\browser\safari.png" />
+    <Content Include="app\static\app\images\favicon.ico" />
+    <Content Include="app\static\app\images\logo-dark.png" />
+    <Content Include="app\static\app\images\logo-thumb.png" />
+    <Content Include="app\static\app\images\logo.png" />
+    <Content Include="app\static\app\images\slider\img-slide-1.jpg" />
+    <Content Include="app\static\app\images\slider\img-slide-2.jpg" />
+    <Content Include="app\static\app\images\slider\img-slide-3.jpg" />
+    <Content Include="app\static\app\images\slider\img-slide-4.jpg" />
+    <Content Include="app\static\app\images\slider\img-slide-5.jpg" />
+    <Content Include="app\static\app\images\slider\img1.jpg" />
+    <Content Include="app\static\app\images\slider\img2.jpg" />
+    <Content Include="app\static\app\images\slider\img3.jpg" />
+    <Content Include="app\static\app\images\user\avatar-1.jpg" />
+    <Content Include="app\static\app\images\user\avatar-2.jpg" />
+    <Content Include="app\static\app\images\user\avatar-3.jpg" />
+    <Content Include="app\static\app\images\user\avatar-4.jpg" />
+    <Content Include="app\static\app\images\user\avatar-5.jpg" />
+    <Content Include="app\static\app\images\user\user-1.png" />
+    <Content Include="app\static\app\images\user\user-2.png" />
+    <Content Include="app\static\app\images\widget\dashborad-1.png" />
+    <Content Include="app\static\app\images\widget\dashborad-2.png" />
+    <Content Include="app\static\app\images\widget\dashborad-3.png" />
+    <Content Include="app\static\app\images\widget\dashborad-4.png" />
+    <Content Include="app\static\app\images\widget\dashborad-5.png" />
+    <Content Include="app\static\app\images\widget\dashborad-6.png" />
+    <Content Include="app\static\app\images\widget\emoticon.png" />
+    <Content Include="app\static\app\img\4IR10.png" />
+    <Content Include="app\static\app\img\4IR8.png" />
+    <Content Include="app\static\app\img\about.jpg" />
+    <Content Include="app\static\app\img\apple-touch-icon.png" />
+    <Content Include="app\static\app\img\back.png" />
+    <Content Include="app\static\app\img\clients\client-1.png" />
+    <Content Include="app\static\app\img\clients\client-2.png" />
+    <Content Include="app\static\app\img\clients\client-3.png" />
+    <Content Include="app\static\app\img\clients\client-4.png" />
+    <Content Include="app\static\app\img\clients\client-5.png" />
+    <Content Include="app\static\app\img\clients\client-6.png" />
+    <Content Include="app\static\app\img\cta-bg.jpg" />
+    <Content Include="app\static\app\img\Entsha 2.0.jpg" />
+    <Content Include="app\static\app\img\Entsha.jpg" />
+    <Content Include="app\static\app\img\ENTSHA2.png" />
+    <Content Include="app\static\app\img\favicon.png" />
+    <Content Include="app\static\app\img\greytech.png" />
+    <Content Include="app\static\app\img\greytech2.png" />
+    <Content Include="app\static\app\img\greytech3.png" />
+    <Content Include="app\static\app\img\heerp.png" />
+    <Content Include="app\static\app\img\hero-bg.jpg" />
+    <Content Include="app\static\app\img\hero-bg.png" />
+    <Content Include="app\static\app\img\mtac.png" />
+    <Content Include="app\static\app\img\palm.jpg" />
+    <Content Include="app\static\app\img\portfolio\portfolio-1.jpg" />
+    <Content Include="app\static\app\img\portfolio\portfolio-2.jpg" />
+    <Content Include="app\static\app\img\portfolio\portfolio-3.jpg" />
+    <Content Include="app\static\app\img\portfolio\portfolio-4.jpg" />
+    <Content Include="app\static\app\img\portfolio\portfolio-5.jpg" />
+    <Content Include="app\static\app\img\portfolio\portfolio-6.jpg" />
+    <Content Include="app\static\app\img\portfolio\portfolio-7.jpg" />
+    <Content Include="app\static\app\img\portfolio\portfolio-8.jpg" />
+    <Content Include="app\static\app\img\portfolio\portfolio-9.jpg" />
+    <Content Include="app\static\app\img\portfolio\portfolio-details-1.jpg" />
+    <Content Include="app\static\app\img\portfolio\portfolio-details-2.jpg" />
+    <Content Include="app\static\app\img\portfolio\portfolio-details-3.jpg" />
+    <Content Include="app\static\app\img\ray.png" />
+    <Content Include="app\static\app\img\team\team-1.jpg" />
+    <Content Include="app\static\app\img\team\team-2.jpg" />
+    <Content Include="app\static\app\img\team\team-3.jpg" />
+    <Content Include="app\static\app\img\tech.png" />
+    <Content Include="app\static\app\img\world2.png" />
+    <Content Include="app\static\app\Logo\BE BROADBAND\BeBroadband - Logo - 2017-01.jpg" />
+    <Content Include="app\static\app\Logo\BE BROADBAND\BeBroadband - Logo - 2017-01.png" />
+    <Content Include="app\static\app\Logo\BE BROADBAND\BeBroadband - Logo Concept 001.pdf" />
+    <Content Include="app\static\app\Logo\CTEL\C-Tel Logo Final - 20170529.pdf" />
+    <Content Include="app\static\app\Logo\CTEL\C-Tel Logo Final_20170529-01.jpg" />
+    <Content Include="app\static\app\Logo\Del Connect\Del Connect - Eswatini 1.jpg" />
+    <Content Include="app\static\app\Logo\Del Connect\image006.png" />
+    <Content Include="app\static\app\Logo\Delphius\Delphius Logo final3.png" />
+    <Content Include="app\static\app\Logo\Delphius\Dephius Logo.jpg" />
+    <Content Include="app\static\app\Logo\DIBANA\Dibana Logo-jpg.jpg" />
+    <Content Include="app\static\app\Logo\DIBANA\Dibana Logo-png-01.png" />
+    <Content Include="app\static\app\Logo\DIBANA\Dibana Logo.pdf" />
+    <Content Include="app\static\app\Logo\FIBREHOME\Fibre Home Logo - jpg-01.jpg" />
+    <Content Include="app\static\app\Logo\FIBREHOME\Fibre Home Logo -png-01.png" />
+    <Content Include="app\static\app\Logo\FIBREHOME\Fibre Home Logo.pdf" />
+    <Content Include="app\static\app\Logo\FIBREXHANGE\Fibre Exchange Logo-jpg-01.jpg" />
+    <Content Include="app\static\app\Logo\FIBREXHANGE\Fibre Exchange Logo-png-01.png" />
+    <Content Include="app\static\app\Logo\FIBREXHANGE\Fibre Exchange Logo.pdf" />
+    <Content Include="app\static\app\Logo\ID4\iD4 - Logo.pdf" />
+    <Content Include="app\static\app\Logo\ID4\iD4 Logo-jpg-01.jpg" />
+    <Content Include="app\static\app\Logo\ID4\iD4 Logo-png-01.png" />
+    <Content Include="app\static\app\Logo\INTELLIVIEW\Intelliview Logo-jpg-01.jpg" />
+    <Content Include="app\static\app\Logo\INTELLIVIEW\Intelliview Logo-png.png" />
+    <Content Include="app\static\app\Logo\INTELLIVIEW\intelliview Logo.pdf" />
+    <Content Include="app\static\app\Logo\NG GROUP\Group Logo\NewGen Group Icon-Logo-High-Res-01.jpg" />
+    <Content Include="app\static\app\Logo\NG GROUP\Group Logo\NewGen Group Icon-Logo-High-Res-01.png" />
+    <Content Include="app\static\app\Logo\NG GROUP\Group Logo\NewGen Group Logo-JPG-High-Res-01.jpg" />
+    <Content Include="app\static\app\Logo\NG GROUP\Group Logo\NewGen Group Logo-JPG-High-Res-RGB-01.jpg" />
+    <Content Include="app\static\app\Logo\NG GROUP\Group Logo\NewGen Group Logo-PNG-High-Res-01.png" />
+    <Content Include="app\static\app\Logo\NG GROUP\Group Logo\NewGen-Group-Icon-Logo-GIF.gif" />
+    <Content Include="app\static\app\Logo\NG GROUP\Group Logo\NewGen-Group-Icon-Logo-JPG-Low-Res.jpg" />
+    <Content Include="app\static\app\Logo\NG GROUP\Group Logo\NewGen-Group-Icon-Logo-PNG-Low-Res.png" />
+    <Content Include="app\static\app\Logo\NG GROUP\Group Logo\NewGen-Group-Logo-GIF.gif" />
+    <Content Include="app\static\app\Logo\NG GROUP\Group Logo\NewGen-Group-Logo-JPG-Low-Res.jpg" />
+    <Content Include="app\static\app\Logo\NG GROUP\Group Logo\NewGen-Group-Logo-PNG-Low-Res.png" />
+    <Content Include="app\static\app\Logo\NG GROUP\New Gen Group Logo-jpg-01.jpg" />
+    <Content Include="app\static\app\Logo\NG GROUP\New Gen Group Logo-png-01.png" />
+    <Content Include="app\static\app\Logo\NG GROUP\New Gen Group Logo.pdf" />
+    <Content Include="app\static\app\Logo\NG SKILLS\New Gen Skills Logo-jpg-01.jpg" />
+    <Content Include="app\static\app\Logo\NG SKILLS\New Gen Skills Logo-png-01.png" />
+    <Content Include="app\static\app\Logo\NG SKILLS\New Gen Skills Logo.pdf" />
+    <Content Include="app\static\app\Logo\NGBS\NGBS Logo-jpg-01.jpg" />
+    <Content Include="app\static\app\Logo\NGBS\NGBS Logo-png-01.png" />
+    <Content Include="app\static\app\Logo\NGBS\NGBS Logo.pdf" />
+    <Content Include="app\static\app\Logo\NGMC.png" />
+    <Content Include="app\static\app\Logo\NGMC\New Gen MC Logo-jpg-01.jpg" />
+    <Content Include="app\static\app\Logo\NGMC\New Gen MC Logo.pdf" />
+    <Content Include="app\static\app\Logo\NGMC\ngg-industry-mc.png" />
+    <Content Include="app\static\app\Logo\NGPL\New Gen Placements Logo-jpg-01.jpg" />
+    <Content Include="app\static\app\Logo\NGPL\New Gen Placements Logo-png-01.png" />
+    <Content Include="app\static\app\Logo\NGPL\New Gen Placements Logo.pdf" />
+    <Content Include="delphius\templates\delphius\employee_form.html" />
+    <Content Include="delphius\templates\delphius\employee_list.html" />
+    <Content Include="delphius\templates\delphius\index.html" />
+    <Content Include="delphius\templates\delphius\interest_form.html" />
+    <Content Include="delphius\templates\delphius\layout.html" />
+    <Content Include="delphius\templates\delphius\lead_form.html" />
+    <Content Include="delphius\templates\delphius\lead_list.html" />
+    <Content Include="delphius\templates\delphius\interest_list.html" />
+    <Content Include="del_connect\templates\del_connect\index.html" />
+    <Content Include="intelliview\templates\intelliview\index.html" />
+    <Content Include="intelliview\templates\intelliview\job_form.html" />
+    <Content Include="intelliview\templates\intelliview\job_list.html" />
+    <Content Include="intelliview\templates\intelliview\layout.html" />
+    <Content Include="NGBS\templates\NGBS\index.html" />
+    <Content Include="NGMC\templates\NGMC\index.html" />
+    <Content Include="requirements.txt" />
+    <Content Include="db.sqlite3" />
+    <Content Include="app\static\app\content\bootstrap.css" />
+    <Content Include="app\static\app\content\bootstrap.min.css" />
+    <Content Include="app\static\app\content\site.css" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\static\app\scripts\bootstrap.js" />
+    <Content Include="app\static\app\scripts\bootstrap.min.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.min.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.min.map" />
+    <Content Include="app\static\app\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.min.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="app\static\app\scripts\modernizr-2.6.2.js" />
+    <Content Include="app\static\app\scripts\respond.js" />
+    <Content Include="app\static\app\scripts\respond.min.js" />
+    <Content Include="app\static\app\scripts\_references.js" />
+    <Content Include="app\templates\app\about.html" />
+    <Content Include="app\templates\app\contact.html" />
+    <Content Include="app\templates\app\index.html" />
+    <Content Include="app\templates\app\layout.html" />
+    <Content Include="app\templates\app\login.html" />
+    <Content Include="app\templates\app\loginpartial.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.html">
+      <SubType>WebBrowser</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="entsha_env\">
+      <Id>entsha_env</Id>
+      <Version>3.10</Version>
+      <Description>entsha_env (Python 3.10 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - ENTSHA 1.0.0 Application</title>
+    {% load staticfiles %}
+    <script src="https://cdn.flexmonster.com/flexmonster.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.flexmonster.com/demo.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+    <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
+    <script src="https://kit.fontawesome.com/d7a03a2fde.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    body {
+        background-image: {% block image %}
+                          {% load static %} url("{%  static "C:\Users\Tshepho Motala\source\repos\entsha\entsha\app\static\app\img\ray.png" %}"); 
+                          {% endblock %}
+        background-size: cover;
+    }
+</style>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand">
+                    {% block background_image %}
+                    {% load static %} <img src="../../static/app/Logo/NG GROUP/New Gen Group Logo-png-01.png" style="height: 35px; padding: 0;">
+                    {% endblock %}
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{% url 'home' %}" style="color : #F5831F">Home</a></li>
+                    <li><a href="http://localhost:8000/admin" style="color : #F5831F">Dashboard</a></li>
+                    <li><a href="http://localhost:8000/about/" style="color : #F5831F">About</a></li>
+                    <li><a href="http://localhost:8000/contact/" style="color : #F5831F">Contact</a></li>
+                </ul>
+                {% include 'app/loginpartial.html' %}
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        {% block content %}{% endblock %}
+        <hr />
+        <center>
+            <footer>
+                <p style="color : #F5831F">&copy; {{ year }} - Entsha 1.0.0</p>
+                
+            </footer>
+        </center>
+    </div>
+
+    <script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
+    <script src="{% static 'app/scripts/bootstrap.js' %}"></script>
+    <script src="{% static 'app/scripts/respond.js' %}"></script>
+    {% block scripts %}{% endblock %}
+
+
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-16">
+        <p>Powered by <a href="https://www.newgengroup.co.za/" title="W3.CSS" target="_blank" class="w3-hover-text-green">New Generation Group</a></p>
+    </footer>
+
+</body>
+</html>

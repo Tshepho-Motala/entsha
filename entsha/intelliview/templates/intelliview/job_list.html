@@ -1,0 +1,55 @@
+{% extends 'app/layout.html' %}
+
+{% block content %}
+<div class="container body-content">
+    <div class="col-md-10 offset-md-1 mt-5">
+        <div class="jumbotron p-5 rounded-lg m-3">
+  <h1 class="display-4">View all Jobs</h1>
+  <p class="lead">Entsha v1.0.0 information system</p>
+  <hr class="my-4">
+  <table class="table table-hover">
+<thread class="border-bottom font-weight-bold">
+    <tr>
+        <th scope="col">Full Name</th>
+        <th scope="col">Identity Number</th>
+        <th scope="col">Job Type</th>
+        <th scope="col">Job Description</th>
+        <th>
+            <a href="{% url 'job_form' %}" class="btn btn-outline-success">
+                <i class="fas fa-user-plus"></i> Add new
+            </a>
+             
+        </th>
+        
+    </tr>
+</thread>
+<tbody>
+    {% for intelliview in job_list %}
+        <tr>
+        <td>{{ intelliview.fullname }}</td>
+        <td>{{ intelliview.id_no }}</td>
+        <td>{{ intelliview.job_type }}</td>
+        <td>{{ intelliview.job_description }}</td>
+        
+        <td>
+             <a href="{}" class="btn btn-outline-success">
+                <i class="fas fa-edit"></i> Update
+            </a>
+            <form action="{}" method="post" class="d-inline">
+                {% csrf_token %}
+            <button type="submit" class="btn">
+                <i class="fas fa-trash-alt fa-lg text-danger float-right"></i> Delete
+            </button>
+            </form>
+        </td>
+        
+        </tr>
+
+    {% endfor %}
+
+</tbody>
+</table>
+</div>
+    </div>
+</div>
+{% endblock %}

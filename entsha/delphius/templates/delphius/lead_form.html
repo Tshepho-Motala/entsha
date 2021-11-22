@@ -1,0 +1,45 @@
+{% extends 'app/layout.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container body-content">
+    <div class="col-md-10 offset-md-1 mt-5">
+        <div class="jumbotron p-10 rounded-lg m-6">
+            <h1 class="display-4">Add New Lead</h1>
+            <p class="lead">PMTAC information systems</p>
+            <form action="" method="post" autocomplete="off">
+                {% csrf_token %}
+
+                {{form.site|as_crispy_field}}
+                {{form.cont_person|as_crispy_field}}
+                {{form.cont_no|as_crispy_field}}
+                {{form.address|as_crispy_field}}
+                {{form.region|as_crispy_field}}
+                <div class="row">
+                    <div class="col-md-4">
+                        {{form.started|as_crispy_field}}
+                        {{form.expected|as_crispy_field}}
+                        {{form.verified|as_crispy_field}}
+                        {{form.action|as_crispy_field}}
+                    </div>
+                    <div class="col-md-8">
+                        {{form.status|as_crispy_field}}
+                        {{form.employee|as_crispy_field}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <button type="submit" class="btn btn-warning btn-lg btn-block"><i class="fas fa-database"></i>Submit</button>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="{% url 'lead_list' %}" class="btn btn-success btn-block btn-lg">
+                            <i class="fas fa-list"></i> Back to list
+                        </a>
+                    </div>
+                </div>
+            </form>
+            <hr class="my-4">
+
+        </div>
+    </div>
+</div>
+{% endblock %}

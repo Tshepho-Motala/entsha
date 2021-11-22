@@ -1,0 +1,71 @@
+{% extends 'app/layout.html' %}
+
+{% block content %}
+<style>
+  
+ 
+</style>
+<div class="container body-content">
+    <div class="col-md-50 offset-md-1 mt-5">
+        <div class="jumbotron p-5 rounded-lg m-3">
+  <h1 class="display-4">View all Leads</h1>
+  <p class="lead">PMTAC information system</p>
+  <hr class="my-4">
+  <table class="table table-hover">
+<thread>
+    <tr>
+        <th scope="col">Contact Person</th>
+        <th scope="col">Contact Number</th>
+        <th scope="col">Address</th>
+        <th scope="col">Region</th>
+        <th scope="col">Status</th>
+        <th scope="col">Brought by</th>
+        <th scope="col">Started date</th>
+        <th scope="col">Expected date</th>
+        <th scope="col">Verified date</th>
+        <th scope="col">Action date</th>
+        <th>
+            <a href="{% url 'lead' %}" class="btn btn-outline-success">
+                <i class="fas fa-user-plus"></i> Add new
+            </a>
+             
+        </th>
+        
+    </tr>
+</thread>
+<tbody>
+    {% for lead in lead_list %}
+        <tr>
+        <td>{{ lead.site }}</td>
+        <td>{{ lead.cont_person }}</td>
+        <td>{{ lead.cont_no }}</td>
+        <td>{{ lead.address }}</td>
+        <td>{{ lead.region }}</td>
+        <td>{{ lead.status }}</td>
+        <td>{{ lead.employee }}</td>
+        <td>{{ lead.started }}</td>
+        <td>{{ lead.expected }}</td>
+        <td>{{ lead.verified }}</td>
+        <td>{{ lead.action }}</td>
+        <td>
+             <a href="" class="btn btn-outline-success">
+                <i class="fas fa-edit"></i> Update
+            </a>
+            <form action="" method="post" class="d-inline">
+                {% csrf_token %}
+            <button type="submit" class="btn">
+                <i class="fas fa-trash-alt fa-lg text-danger float-right"></i> Delete
+            </button>
+            </form>
+        </td>
+        
+        </tr>
+
+    {% endfor %}
+
+</tbody>
+</table>
+</div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends 'app/layout.html' %}
+
+{% block content %}
+<style>
+</style>
+<div class="container body-content">
+    <div class="col-md-50 offset-md-1 mt-5">
+        <div class="jumbotron p-5 rounded-lg m-3">
+            <h1 class="display-4">View all interests</h1>
+            <p class="interest">PMTAC information system</p>
+            <hr class="my-4">
+            <table class="table table-hover">
+                <thread>
+                    <tr>
+                        <th scope="col">Site Name</th>
+                        <th scope="col">Lead Contact Person</th>
+                        <th scope="col">Lead Contact Number</th>
+                        <th scope="col">Lead Address</th>
+                        <th scope="col">Lead Region</th>
+                        <th scope="col">Lead Latitude</th>
+                        <th scope="col">Lead Longitude</th>
+                        <th scope="col">Solution Type Requested</th>
+                        <th scope="col">Estimated Duration of Public Participation in day</th>
+                        <th scope="col">Public Participation required</th>
+                        <th scope="col">Public Participation Likelihood/th>
+                        <th scope="col">Municipal Approval Required</th>
+                        <th scope="col">Estimated Municipal in days</th>
+                        <th scope="col">Power Connection Estimate</th>
+                        <th scope="col">Dawn to Dusk Estimate</th>
+                        <th scope="col">Del Connect Interested</th>
+                        <th scope="col">Solution Sheareable</th>
+                        <th scope="col">Estimated Solution Cos</th>
+                        <th scope="col">Operator Interest</th>
+                        <th>
+                            <a href="" class="btn btn-outline-success">
+                                <i class="fas fa-user-plus"></i> Add new
+                            </a>
+
+                        </th>
+
+                    </tr>
+                </thread>
+                <tbody>
+                    {% for interest in interest_list %}
+                    <tr>
+                        <td>{{ interest.site_name }}</td>
+                        <td>{{ interest.cont_person }}</td>
+                        <td>{{ interest.cont_no }}</td>
+                        <td>{{ interest.address }}</td>
+                        <td>{{ interest.region }}</td>
+                        <td>{{ interest.latitude }}</td>
+                        <td>{{ interest.longitude }}</td>
+                        <td>{{ interest.solution_type }}</td>
+                        <td>{{ interest.est_duration }}</td>
+                        <td>{{ interest.p_participation }}</td>
+                        <td>{{ interest.participation }}</td>
+                        <td>{{ interest.municipal_appr }}</td>
+                        <td>{{ interest.est_municipal }}</td>
+                        <td>{{ interest.est_power_conn }}</td>
+                        <td>{{ interest.dusk_dawn }}</td>
+                        <td>{{ interest.delconn_interest }}</td>
+                        <td>{{ interest.solution_sh }}</td>
+                        <td>{{ interest.est_solu_cost }}</td>
+                        <td>{{ interest.operator_interest }}</td>
+                        <td>
+                            <a href="" class="btn btn-outline-success">
+                                <i class="fas fa-edit"></i> Update
+                            </a>
+                            <form action="" method="post" class="d-inline">
+                                {% csrf_token %}
+                                <button type="submit" class="btn">
+                                    <i class="fas fa-trash-alt fa-lg text-danger float-right"></i> Delete
+                                </button>
+                            </form>
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
